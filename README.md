@@ -1,2 +1,2 @@
-# C++ in Practice
+# C/C++ in Practice
 
