@@ -12,7 +12,7 @@ To cover:
 
 - [ ] snake game
 - [ ] terris
-- [ ] tic-tac-toe
+- [x] tic-tac-toe
 
 Most of sub-folders using Raylib engine with C++ wrapper. Packages are managed with CMake:
 
@@ -22,4 +22,11 @@ mkdir build
 cmake ..
 make
 ./binary_file
+```
+
+Or running directly from the terminal (MacOS):
+
+```bash
+brew install raylib # Raylib should be installed already
+clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
 ```
