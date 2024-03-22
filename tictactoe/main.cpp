@@ -19,7 +19,7 @@ int main(void) {
   Sound Place = LoadSound("resources/Place.wav");
   Sound Win = LoadSound("resources/Win.wav");
   // Main Menu
-  Texture2D BackgroundImageLight = LoadTexture("resources/whale.png");
+  Texture2D BackgroundImageLight = LoadTexture("resources/BackgroundLight.png");
   Texture2D BackgroundImageDark = LoadTexture("resources/BackgroundDark.png");
 
   Texture2D MenuTitleLight = LoadTexture("resources/MenuTitleLight.png");

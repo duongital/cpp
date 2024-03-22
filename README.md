@@ -10,7 +10,7 @@ Todo:
 
 Visualization and Game are using Raylib engine. To run the code in local:
 
-1. Packages are managed with `CMakeLists.txt`:
+Option 1: Packages are managed with `CMakeLists.txt`:
 
 ```bash
 cd sub_folder
@@ -20,7 +20,7 @@ make
 ./main
 ```
 
-2. Running directly from the terminal (MacOS):
+Option 2: Running directly from the terminal (MacOS):
 
 ```bash
 brew install raylib # Raylib should be installed already
@@ -28,4 +28,4 @@ clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
 ./main
 ```
 
-3. Other files can be run directly from VSCode, there is a `build` folder generated with related files after the build executes successfully.
+Option 3: Other files can be run directly from VSCode, there is a `build` folder generated with related files after the build executes successfully.
