@@ -14,7 +14,9 @@ Games to cover:
 - [ ] terris
 - [x] tic-tac-toe
 
-Most of sub-folders using Raylib engine with C++ wrapper. Packages are managed with CMake:
+Visualization and Game are using Raylib engine:
+
+1. Packages are managed with `CMakeLists.txt`:
 
 ```bash
 cd sub_folder
@@ -24,10 +26,12 @@ make
 ./main
 ```
 
-Or running directly from the terminal (MacOS):
+2. Running directly from the terminal (MacOS):
 
 ```bash
 brew install raylib # Raylib should be installed already
 clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
 ./main
 ```
+
+3. Other files can be run directly from VSCode, there is a `build` folder generated with related files after the build executes successfully.
