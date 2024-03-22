@@ -1,20 +1,14 @@
-# C/C++ in General Topics
+# Games Cover
 
-Main purpose is to cover games that we all already know how to play!
+Cover the games that we all already know how to play!
 
-During the time, I also learn and practice again several skills:
+Todo:
 
-- DS and Algorithms
-- OOP concepts
-- Visualization and Math theories
-
-Games to cover:
-
+- [x] tic-tac-toe
 - [ ] snake game
 - [ ] terris
-- [x] tic-tac-toe
 
-Visualization and Game are using Raylib engine:
+Visualization and Game are using Raylib engine. To run the code in local:
 
 1. Packages are managed with `CMakeLists.txt`:
 
