@@ -1,6 +1,6 @@
-# Games
+# C/C++ in General Topics
 
-Cover games that we all already know how to play!
+Main purpose is to cover games that we all already know how to play!
 
 During the time, I also learn and practice again several skills:
 
@@ -8,7 +8,7 @@ During the time, I also learn and practice again several skills:
 - OOP concepts
 - Visualization and Math theories
 
-To cover:
+Games to cover:
 
 - [ ] snake game
 - [ ] terris
@@ -21,7 +21,7 @@ cd sub_folder
 mkdir build
 cmake ..
 make
-./binary_file
+./main
 ```
 
 Or running directly from the terminal (MacOS):
@@ -29,4 +29,5 @@ Or running directly from the terminal (MacOS):
 ```bash
 brew install raylib # Raylib should be installed already
 clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
+./main
 ```

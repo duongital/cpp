@@ -2,35 +2,31 @@
 #include <string>
 using namespace std;
 
-class MyClass
-{                  // The class
-public:            // Access specifier
-  int myNum;       // Attribute (int variable)
-  string myString; // Attribute (string variable)
+class MyClass {     // The class
+ public:            // Access specifier
+  int myNum;        // Attribute (int variable)
+  string myString;  // Attribute (string variable)
 };
 
-class Rectangle
-{
+class Rectangle {
   int width, height;
 
-public:
+ public:
   Rectangle(int width, int height) : width(width), height(height) {}
-  void set_values(int x, int y)
-  {
+  void set_values(int x, int y) {
     width = x;
     height = y;
   }
   int area() { return width * height; }
 };
 
-int main()
-{
-  MyClass myObj; // Create an object of MyClass
+int main() {
+  MyClass myObj;  // Create an object of MyClass
 
   myObj.myNum = 15;
   myObj.myString = "Some text";
 
-  MyClass a; // = new MyClass();
+  MyClass a;  // = new MyClass();
   a.myNum = 16;
 
   // cout << a.myNum << "\n";
