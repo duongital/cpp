@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> deleteConsecutiveSequences(const std::vector<int>& input) {
-  std::vector<int> result;
+using namespace std;
+
+vector<int> deleteConsecutiveSequences(const vector<int>& input) {
+  vector<int> result;
   int sum = 0;
 
   for (int i = 0; i < input.size(); ++i) {
@@ -30,31 +32,31 @@ std::vector<int> deleteConsecutiveSequences(const std::vector<int>& input) {
 }
 
 int main() {
-  std::vector<int> test1 = {1, 2, -3, 3, 1};
-  std::vector<int> test2 = {1, 2, 3, -3, 4};
-  std::vector<int> test3 = {1, 2, 3, -3, -2};
+  vector<int> test1 = {1, 2, -3, 3, 1};
+  vector<int> test2 = {1, 2, 3, -3, 4};
+  vector<int> test3 = {1, 2, 3, -3, -2};
 
-  std::vector<int> result1 = deleteConsecutiveSequences(test1);
-  std::vector<int> result2 = deleteConsecutiveSequences(test2);
-  std::vector<int> result3 = deleteConsecutiveSequences(test3);
+  vector<int> result1 = deleteConsecutiveSequences(test1);
+  vector<int> result2 = deleteConsecutiveSequences(test2);
+  vector<int> result3 = deleteConsecutiveSequences(test3);
 
-  std::cout << "Test 1: ";
+  cout << "Test 1: ";
   for (int num : result1) {
-    std::cout << num << " ";
+    cout << num << " ";
   }
-  std::cout << std::endl;
+  cout << endl;
 
-  std::cout << "Test 2: ";
+  cout << "Test 2: ";
   for (int num : result2) {
-    std::cout << num << " ";
+    cout << num << " ";
   }
-  std::cout << std::endl;
+  cout << endl;
 
-  std::cout << "Test 3: ";
+  cout << "Test 3: ";
   for (int num : result3) {
-    std::cout << num << " ";
+    cout << num << " ";
   }
-  std::cout << std::endl;
+  cout << endl;
 
   return 0;
 }
