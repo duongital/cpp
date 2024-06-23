@@ -8,12 +8,14 @@ Todo:
 - [ ] snake game
 - [ ] terris
 
-# Run local 
+# Run Raylib projects: 
+
 Visualization and Game are using Raylib engine. To run the code in local:
 
-Option 1: Packages are managed with `CMakeLists.txt`:
+Option 1: Packages are managed with `CMakeLists.txt` file:
 
 ```bash
+brew install cmake
 cd sub_folder
 mkdir build
 cmake ..
@@ -31,11 +33,20 @@ clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
 
 Option 3: Other files can be run directly from VSCode, there is a `build` folder generated with related files after the build executes successfully.
 
-# Using GCC
+# Using native GCC or MacOS Clang:
 
-Install native GCC with Homebrew: `brew install gcc --force-bottle`
+Install native GCC with Homebrew:
 
-Check version by openning: Finder / Cmd Shift G / `/opt/homebrew/Cellar` / gcc / *version* / *bin files*
+```bash
+brew install gcc --force-bottle
+g++-14 main.cpp -o main # check version (1)
+./main # or inline: g++-14 main.cpp -o main && ./main
+```
 
-Then we can use terminal to run GCC: `g++-14 main.cpp -o main`
+(1) Check version by openning: Finder / Cmd Shift G / `/opt/homebrew/Cellar` / gcc / *version* / *bin files*
 
+MacOS Clang:
+
+```bash
+clang++ main.cpp -o main && ./main
+```
