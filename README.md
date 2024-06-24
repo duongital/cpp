@@ -4,7 +4,7 @@ To remember knowledge, and:
 
 Cover the games that we all already know how to play!
 
-Todo:
+To cover:
 
 - [x] tic-tac-toe
 - [ ] snake game
@@ -35,11 +35,13 @@ clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
 ./main
 ```
 
+TODO: run or build Raylib projects with `g++-14`
+
 Option 3: Other files can be run directly from VSCode, there is a `build` folder generated with related files after the build executes successfully.
 
 ## How to debug project:
 
-- [ ] Create a new task to run or debug with Clang++
+TODO: Create a new task to run or debug with Clang++
 
 # Run one file executable by native GCC on MacOS:
 

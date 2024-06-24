@@ -23,7 +23,7 @@ int main(void) {
   Rectangle Rect;
 
   Rect.setWidth(5);
-  Rect.setHeight(7);
+  Rect.setHeight(6);
 
   // Print the area of the object.
   cout << "Total area: " << Rect.getArea() << endl;
