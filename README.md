@@ -37,9 +37,9 @@ clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
 
 Option 3: Other files can be run directly from VSCode, there is a `build` folder generated with related files after the build executes successfully.
 
-## How to debug project: ???
+## How to debug project:
 
-Create a new task to run or debug with Clang++
+- [ ] Create a new task to run or debug with Clang++
 
 # Run one file executable by native GCC on MacOS:
 
@@ -53,7 +53,7 @@ g++-14 main.cpp -ld_classic -o main # -ld_classic to avoid errors and use old sy
 
 (1) Check version (g++-14) by openning: Finder / Cmd Shift G / `/opt/homebrew/Cellar` / gcc / *version* / *bin files*
 
-## How to debug a file: ???
+## How to debug a file:
 
-Use `.vscode/tasks.json` to create a task `C++: g++-14`, then open a C++ file. 
-On top right, there is a play button to run or debug the program with the selected task.
+- Use `.vscode/tasks.json` to create a task `C++: g++-14`, then open a C++ file. 
+- On top right, there is a play button to run or debug the program with the selected task.
