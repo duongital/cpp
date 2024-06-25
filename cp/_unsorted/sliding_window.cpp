@@ -1,4 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 int slidingWindowAtMost(vector<int> &nums, int goal) {
