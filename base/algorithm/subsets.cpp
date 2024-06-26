@@ -2,15 +2,15 @@
 #include <vector>
 
 // Function to print a subset
-void printSubset(const std::vector<int> &subset) {
-  for (const auto &element : subset) {
+void printSubset(const std::vector<int> subset) {
+  for (int element : subset) {
     std::cout << element << " ";
   }
   std::cout << std::endl;
 }
 
 // Function to generate all subsets of a given array
-void generateSubsets(const std::vector<int> &array) {
+void generateSubsets(const std::vector<int> array) {
   int n = array.size();
   int totalSubsets = 1 << n;  // 2^n
 

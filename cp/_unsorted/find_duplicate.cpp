@@ -18,7 +18,7 @@ vector<int> findDuplicates(vector<int>& nums) {
 }
 
 int main() {
-  vector<int> test{15, 20, 20, 2, 4};
+  vector<int> test = {15, 20, 20, 2, 4};
   vector<int> result = findDuplicates(test);
   for (auto e : result) {
     cout << e << endl;

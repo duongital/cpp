@@ -3,7 +3,7 @@
 using namespace std;
 
 void count(string& s) {
-  unordered_map<char, int> m;
+  map<char, int> m;
   for (char c : s) {
     m[c]++;
   }
