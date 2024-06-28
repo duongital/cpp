@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 // Function to print a subset
 void printSubset(const std::vector<int> subset) {

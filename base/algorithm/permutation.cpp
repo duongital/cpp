@@ -16,7 +16,7 @@ void permute(string a, int l, int r) {
     // Permutations made
     for (int i = l; i <= r; i++) {
       // Swapping done
-      swap(a[l], a[i]);
+      // swap(a[l], a[i]);
 
       // Recursion called
       permute(a, l + 1, r);

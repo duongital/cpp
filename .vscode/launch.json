@@ -9,7 +9,7 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "externalConsole": false, // use `true` if has user input 
+            "externalConsole": true, // use `true` if has user input 
             "MIMode": "lldb",
             "preLaunchTask": "C++: g++-14"
         }

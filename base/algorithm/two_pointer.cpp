@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 /*
 consider a problem where we are given an array of n positive integers and a
