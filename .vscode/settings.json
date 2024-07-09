@@ -58,7 +58,8 @@
     "raylib.h": "c",
     "list": "cpp",
     "thread": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "coroutine": "cpp"
   },
   "editor.formatOnSave": true,
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
