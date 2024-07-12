@@ -1,16 +1,8 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
-// bool compare1(int& a[2], int& b[2]) {
-//   if (a[0] < b[0]) return true;
-//   return false;
-// }
-
-bool callback(vector<int> a, vector<int> b) {
-  if (a[0] > b[0]) return true;
-  return false;
-}
+const int MAX = 2005;
+int ranking[MAX];
 
 int main() {
   int n;
@@ -23,19 +15,18 @@ int main() {
     arr.push_back(e);
   }
 
-  vector<vector<int>> temp;
+  vector<int> sortedArr = arr;
+  sort(sortedArr.begin(), sortedArr.end(), greater<int>());
   for (int i = 0; i < n; i++) {
-    vector<int> element = {arr[i], i};
-    temp.push_back(element);
+    int position = sortedArr[i];
+
+    if (!ranking[position]) {
+      ranking[position] = i + 1;
+    }
   }
 
-  sort(temp.begin(), temp.end(), callback);
-
-  for (int i = 0; i < temp.size(); i++) {
-    for (int e : temp[i]) {
-      cout << e << " ";
-    }
-    cout << endl;
+  for (int& e : arr) {
+    cout << ranking[e] << " ";
   }
 
   return 0;
