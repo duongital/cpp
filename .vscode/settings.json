@@ -1,6 +1,9 @@
 {
     "editor.formatOnSave": true,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
+    "C_Cpp.default.includePath": [
+        "/usr/local/include"
+    ],
     "editor.tabSize": 2,
     "files.associations": {
         "queue": "cpp"
