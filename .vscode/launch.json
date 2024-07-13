@@ -1,7 +1,11 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "C++: g++-14 build and debug active file",
+            "name": "clang++ debug",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/build/${fileBasenameNoExtension}",
@@ -11,8 +15,7 @@
             "environment": [],
             "externalConsole": true, // use `true` if has user input 
             "MIMode": "lldb",
-            "preLaunchTask": "C++: g++-14"
+            "preLaunchTask": "C++: clang++"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
