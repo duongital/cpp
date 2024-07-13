@@ -16,6 +16,7 @@ int main() {
     stack<char> stk;
     int count = 0;
     for (char c : s) {
+      if (s[0] == '>') continue;
       if (!stk.empty() && stk.top() == '<' && c == '>') {
         stk.pop();
         if (!stk.empty() && stk.top() == '<') {

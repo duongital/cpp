@@ -59,3 +59,9 @@ g++-14 main.cpp -ld_classic -o main # -ld_classic to avoid errors and use old sy
 
 - Use `.vscode/tasks.json` to create a task `C++: g++-14`, then open a C++ file. 
 - On top right, there is a play button to run or debug the program with the selected task.
+
+
+# VSCode extensions:
+
+- C/C++ IntelliSense (Microsoft)
+- clangd (to have linter check)
