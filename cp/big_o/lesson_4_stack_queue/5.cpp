@@ -9,7 +9,7 @@ map<char, int> val;
 int main() {
   cin >> s;
 
-  val['C'] = 120;
+  val['C'] = 12;
   val['H'] = 1;
   val['O'] = 16;
   val['('] = -1;

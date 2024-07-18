@@ -35,25 +35,7 @@ clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
 ./main
 ```
 
-TODO: run or build Raylib projects with `g++-14`
-
 Option 3: Other files can be run directly from VSCode, there is a `build` folder generated with related files after the build executes successfully.
-
-## How to debug project:
-
-TODO: Create a new task to run or debug with Clang++
-
-# Run one file executable by native GCC on MacOS:
-
-Install native GCC with Homebrew:
-
-```bash
-brew install gcc --force-bottle
-g++-14 main.cpp -ld_classic -o main # -ld_classic to avoid errors and use old syntax
-./main # or inline: g++-14 main.cpp -o main && ./main
-```
-
-(1) Check version (g++-14) by openning: Finder / Cmd Shift G / `/opt/homebrew/Cellar` / gcc / *version* / *bin files*
 
 ## How to debug a file:
 
