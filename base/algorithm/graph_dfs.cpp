@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
-#define MAX 100
 
 using namespace std;
-
-int V, E;
+const int MAX = 100;
+int V, E;  // input using edge list
 
 vector<int> graph[MAX];
 bool visited[MAX];

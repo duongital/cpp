@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
-#define MAX 10
+const int MAX = 100;
+int V, E;  // input using edge list
 
 vector<int> graph[MAX];
 bool visited[MAX];
 int path[MAX];
-
-int E, V;
 
 void BFS(int s) {
   for (int i = 0; i < V; i++) {
