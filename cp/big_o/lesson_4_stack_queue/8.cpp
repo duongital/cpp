@@ -1,34 +1,30 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <stack>
+#include <string>
 using namespace std;
 
 int main() {
-  int n;
-  cin >> n;
-  vector<string> arr;
+  int T, ans;
+  string s;
+  cin >> T;
 
-  for (int i = 0; i < n; i++) {
-    string e;
-    cin >> e;
-    arr.push_back(e);
-  }
-  for (string s : arr) {
-    stack<char> stk;
-    int count = 0;
-    for (char c : s) {
-      if (s[0] == '>') continue;
-      if (!stk.empty() && stk.top() == '<' && c == '>') {
-        stk.pop();
-        if (!stk.empty() && stk.top() == '<') {
-          break;
-        }
-        count += 2;
+  for (int k = 0; k < T; k++) {
+    cin >> s;
+    stack<char> expr;
+    ans = 0;
+
+    for (int i = 0; i < s.length(); i++) {
+      if (s[i] == '<') {
+        expr.push(s[i]);
+      } else if (expr.empty()) {
+        break;
       } else {
-        stk.push(c);
+        expr.pop();
+        ans = (expr.empty() ? i + 1 : ans);
       }
     }
-    cout << count << endl;
-  }
 
+    cout << ans << endl;
+  }
   return 0;
 }

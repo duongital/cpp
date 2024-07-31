@@ -2,12 +2,13 @@
 
 using namespace std;
 typedef pair<int, int> pii;
-const int MAX = 10;
+const int MAX = 10000;
 const int INF = 1e9;
 
 vector<vector<pii>> graph(MAX, vector<pii>());
 vector<int> dist(MAX, INF);
 int path[MAX];
+map<string, int> m;
 
 struct MinHeap {
   bool operator()(const pii &a, const pii &b) { return a.second > b.second; }
@@ -22,6 +23,7 @@ void Dijkstra(int s) {
     pq.pop();
     int u = top.first;
     int w = top.second;
+    if (dist[u] != w) continue;
 
     for (int i = 0; i < graph[u].size(); i++) {
       pii neighbor = graph[u][i];
@@ -35,29 +37,41 @@ void Dijkstra(int s) {
 }
 
 int main() {
-  int n, s, t;
-  cin >> n;
-  s = 0;
-  t = 4;
-  int d = 0;
-  // input using adjacency matrix
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-      cin >> d;
-      if (d > 0) graph[i].push_back(make_pair(j, d));
+  int s;
+  cin >> s;
+  while (s--) {
+    // reset graph
+    graph = vector<vector<pii>>(MAX, vector<pii>());
+    int result = INF;
+
+    int n, oneWay, twoWay, start, end;
+    cin >> n >> oneWay >> twoWay >> start >> end;
+
+    while (oneWay--) {
+      int u, v, w;
+      cin >> u >> v >> w;
+      graph[u].push_back(make_pair(v, w));
+    }
+
+    while (twoWay--) {
+      int u, v, w;
+      cin >> u >> v >> w;
+      graph[u].push_back(make_pair(v, w));
+      // reset dist
+      dist = vector<int>(MAX, INF);
+      Dijkstra(start);
+      result = min(result, dist[end]);
+
+      // pop back graph
+      graph[u].pop_back();
+    }
+
+    if (result < INF) {
+      cout << result << endl;
+    } else {
+      cout << -1 << endl;
     }
   }
-  Dijkstra(s);
-  for (auto i : dist) cout << i << " ";
+
   return 0;
 }
-
-/*
-6
-0 1 0 0 0 0
-0 0 5 2 0 7
-0 0 0 0 0 1
-2 0 1 0 4 0
-0 0 0 3 0 0
-0 0 0 0 1 0
-*/

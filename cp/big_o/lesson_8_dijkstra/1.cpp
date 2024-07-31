@@ -2,7 +2,7 @@
 
 using namespace std;
 typedef pair<int, int> pii;
-const int MAX = 10;
+const int MAX = 501;
 const int INF = 1e9;
 
 vector<vector<pii>> graph(MAX, vector<pii>());
@@ -35,29 +35,29 @@ void Dijkstra(int s) {
 }
 
 int main() {
-  int n, s, t;
-  cin >> n;
-  s = 0;
-  t = 4;
-  int d = 0;
-  // input using adjacency matrix
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-      cin >> d;
-      if (d > 0) graph[i].push_back(make_pair(j, d));
+  int t;
+  cin >> t;
+  while (t--) {
+    int u, v, w;
+    cin >> u >> v >> w;
+    graph[u].push_back(make_pair(v, w));
+    graph[v].push_back(make_pair(u, w));
+  }
+
+  int start;
+  cin >> start;
+  Dijkstra(start);
+  int tc;
+  cin >> tc;
+  while (tc--) {
+    int end;
+    cin >> end;
+    if (dist[end] != INF) {
+      cout << dist[end] << endl;
+    } else {
+      cout << "NO PATH" << endl;
     }
   }
-  Dijkstra(s);
-  for (auto i : dist) cout << i << " ";
+
   return 0;
 }
-
-/*
-6
-0 1 0 0 0 0
-0 0 5 2 0 7
-0 0 0 0 0 1
-2 0 1 0 4 0
-0 0 0 3 0 0
-0 0 0 0 1 0
-*/
