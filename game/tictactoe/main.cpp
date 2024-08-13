@@ -1,8 +1,8 @@
 #include "raylib.h"
 
 int main(void) {
-  const int screenWidth = 300;
-  const int screenHeight = 400;
+  const double screenWidth = 300;
+  const double screenHeight = 400;
 
   int Scene = 1;
   int Squares[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};

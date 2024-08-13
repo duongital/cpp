@@ -2,7 +2,8 @@
     "editor.formatOnSave": true,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
     "C_Cpp.default.includePath": [
-        "/usr/local/include"
+        "/usr/local/include",
+        "/opt/homebrew/Cellar/raylib/5.0/include"
     ],
     "editor.tabSize": 2,
     "files.associations": {

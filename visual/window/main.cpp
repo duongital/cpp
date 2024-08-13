@@ -1,6 +1,6 @@
 #include "raylib.h"
 
-int main(void) {
+int main() {
   int screenWidth = 800;
   int screenHeight = 450;
 
@@ -10,8 +10,7 @@ int main(void) {
   Texture2D texture = LoadTexture("resources/Circle.png");
 
   // Main game loop
-  while (!WindowShouldClose())  // Detect window close button or ESC key
-  {
+  while (!WindowShouldClose()) {
     // Update
     //----------------------------------------------------------------------------------
     // TODO: Update your variables here
@@ -22,11 +21,11 @@ int main(void) {
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
-    DrawTexture(texture, 0, 0, WHITE);
-    DrawText("Congrats! You created your first window!", 190, 200, 20,
-             LIGHTGRAY);
+    DrawTexture(texture, 0, 0, PINK);
+    DrawText("Congrats! You created your first window!", 190, 200, 20, RED);
 
     EndDrawing();
+
     //----------------------------------------------------------------------------------
   }
 

@@ -1,2 +1,2 @@
 CompileFlags:
-  Add: [-std=c++17, -Wunused-variable]
+  Add: [-std=c++17, -Wunused-variable, "-I/opt/homebrew/Cellar/raylib/5.0/include"]
