@@ -7,7 +7,7 @@ Cover the games that we all already know how to play!
 To cover:
 
 - [x] tic-tac-toe
-- [ ] snake game
+- [x] snake game
 - [ ] terris
 
 Code formatter with Google style and tasks are configured in `.vscode` folder.
