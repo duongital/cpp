@@ -1,41 +1,33 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-const int MAX = 26;
+const int MAX = 4;
+vector<char> dna = {'A', 'C', 'G', 'T'};
+int result = 0;
 
-struct Node {
-  Node *child[MAX];
+struct TrieNode {
+  TrieNode *child[MAX];
   int countWord;
 };
 
-Node *newNode() {
-  Node *node = new Node();
+TrieNode *newNode() {
+  TrieNode *node = new TrieNode();
   node->countWord = 0;
   for (int i = 0; i < MAX; i++) node->child[i] = NULL;
   return node;
 }
 
-bool isWord(Node *node) { return node->countWord != 0; }
-
-void addWord(Node *root, string s) {
-  int ch;
-  Node *temp = root;
+void addWord(TrieNode *root, string s) {
+  TrieNode *temp = root;
   for (int i = 0; i < s.size(); i++) {
-    ch = s[i] - 'a';
+    int level = i + 1;
+    int ch = find(dna.begin(), dna.end(), s[i]) - dna.begin();
     if (temp->child[ch] == NULL) {
       temp->child[ch] = newNode();
     }
     temp = temp->child[ch];
-  }
-  temp->countWord++;
-}
-
-void printWord(Node *root, string s) {
-  if (isWord(root)) cout << s << endl;
-  for (int i = 0; i < MAX; i++) {
-    if (root->child[i]) {
-      printWord(root->child[i], s + (char)('a' + i));
-    }
+    temp->countWord++;
+    result = max(result, temp->countWord * level);
   }
 }
 
@@ -43,14 +35,19 @@ int main() {
   int TC;
   cin >> TC;
   int current = 1;
+
   while (TC--) {
     int n;
     cin >> n;
+    result = 0;
+
+    TrieNode *root = newNode();
     while (n--) {
       string s;
       cin >> s;
+      addWord(root, s);
     }
-    cout << "Case " << current << ":" << endl;
+    cout << "Case " << current << ": " << result << endl;
     current++;
   }
   return 0;

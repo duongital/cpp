@@ -30,7 +30,7 @@ bool FloydWarshall(vvi& graph, vvi& dist) {
         if (dist[k][j].first != INF &&
             dist[i][j].first > dist[i][k].first + dist[k][j].first) {
           dist[i][j].first = dist[i][k].first + dist[k][j].first;
-          if (path[i][j].second) }
+        }
       }
     }
   }
