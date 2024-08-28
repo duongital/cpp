@@ -1,5 +1,8 @@
 ## Build for web:
 
+- [all games](./_/)
+- [snake game](./_/index.html)
+
 Step 1: install emcc
 
 ```bash
