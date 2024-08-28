@@ -92,6 +92,8 @@
         "unordered_set": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "algorithm": "cpp"
-    }
+        "algorithm": "cpp",
+        "raylib.h": "c"
+    },
+    "deno.enable": true
 }
