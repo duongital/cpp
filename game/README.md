@@ -1,7 +1,45 @@
-## Build for web:
+Cover the games that we all already know how to play!
 
-- [all games](./all/)
-- [snake game](./all/index.html)
+To cover:
+
+- [x] tic-tac-toe
+- [x] snake game
+- [ ] terris
+
+Code formatter with Google style and tasks are configured in `.vscode` folder.
+
+# Run Raylib (visual + game) projects:
+
+Visualization and Game are using Raylib engine. To run the code in local:
+
+Option 1: Packages are managed with `CMakeLists.txt` file:
+
+```bash
+brew install cmake
+cd sub_folder
+mkdir build
+cmake ..
+make
+./main
+```
+
+Option 2 (recommended): using Clang++ to run directly from the terminal (MacOS):
+
+```bash
+brew install raylib # Raylib should be installed already
+clang++ main.cpp $(pkg-config --libs --cflags raylib) -o main -std=c++11
+./main
+```
+
+Note: `pkg-config --libs --cflags raylib` is shortcut to include raylib
+libraries.
+
+Option 3: Other files can be run directly from VSCode, there is a `build` folder
+generated with related files after the build executes successfully.
+
+# Build for web:
+
+- [snake game](./snake/web/)
 
 Step 1: install emcc
 
@@ -32,11 +70,11 @@ Step 3: build game
 # activate emcc program
 source /Users/duongital/Programming/cpp/emsdk/emsdk_env.sh 
 
-# create a build folder (not tracking with git)
-mkdir build 
+# create a web folder in the related game
+mkdir web 
 
 # build game for web
-emcc -o ./build/index.html game.c \
+emcc -o ./snake/web/index.html ./snake/main.cpp \
    -Os -Wall ./libraylib.a \
     $(pkg-config --libs --cflags raylib) \
     -s ASYNCIFY \
