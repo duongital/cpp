@@ -1,7 +1,7 @@
 ## Build for web:
 
-- [all games](./_/)
-- [snake game](./_/index.html)
+- [all games](./all/)
+- [snake game](./all/index.html)
 
 Step 1: install emcc
 
